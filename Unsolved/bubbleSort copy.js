@@ -1,21 +1,20 @@
 // Bubble Sort Interview Questions:
 
-// const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
-// for (let i = 0; i < cars.length; i++) {
-//   text += cars[i] + "<br>";
-// }
-
-// Write a function that sorts an array of numbers in order.
 function bubbleSort(array) {
-  // write for loop
   for (let i = 0; i < array.length; i++) {
-    console.log(array[i], array[i + 1]);
-    // array[0]; 6, array [0 + 1]; 6;3
-  }
+    for (let j = 0; j < array.length - i - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        let temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
+  } 
   return array;
 }
-// [2, 1]
-bubbleSort([6, 3, 0, 5]);
+
+// bubbleSort([6, 3, 0, 5]);
+bubbleSort([]);
 
 // Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements 
 // if they are in the wrong order. 
@@ -34,9 +33,6 @@ bubbleSort([6, 3, 0, 5]);
 //   }
 //   return array;
 // }
-
-// https://medium.com/@stheodorejohn/bubble-sort-in-javascript-a-simple-sorting-algorithm-e09df6f07c2a#:~:text=The%20bubbleSort%20function%20takes%20an,each%20pair%20of%20adjacent%20elements.
-// https://www.geeksforgeeks.org/bubble-sort/
 
 // You can do this with the Bubble Sort algorithm.
 // If you are unfamiliar with Bubble Sort,
