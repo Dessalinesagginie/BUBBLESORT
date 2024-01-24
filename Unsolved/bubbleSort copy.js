@@ -1,4 +1,3 @@
-// Bubble Sort Interview Questions:
 
 function bubbleSort(array) {
   for (let i = 0; i < array.length; i++) {
@@ -12,43 +11,6 @@ function bubbleSort(array) {
   } 
   return array;
 }
-
-// bubbleSort([6, 3, 0, 5]);
-bubbleSort([]);
-
-// Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements 
-// if they are in the wrong order. 
-
-// function bubbleSort(array) {
-//   const length = array.length;
-//   for (let i = 0; i < length - 1; i++) {
-//     for (let j = 0; j < length - i - 1; j++) {
-//       if (array[j] > array[j + 1]) {
-//         // Swap elements
-//         const temp = array[j];
-//         array[j] = array[j + 1];
-//         array[j + 1] = temp;
-//       }
-//     }
-//   }
-//   return array;
-// }
-
-// You can do this with the Bubble Sort algorithm.
-// If you are unfamiliar with Bubble Sort,
-// use Google to read up on the concept.
-// Spend about 10 minutes pseudocoding your solution before writing any JavaScript.
-
-// Use the array provided below.
-
-// Display the unsorted array in the `#start` div of `index.html`.
-
-// When the user clicks the `button` in index.html,
-// the sorted result should be displayed in the `#result` div.
-
-// DO NOT USE JQUERY TO SELECT ELEMENTS. ONLY USE VANILLA JS.
-
-
 
 var unsortedArr = [
   1, 326, 251, 24, 284, 364, 287, 74, 89,
@@ -99,3 +61,12 @@ var unsortedArr = [
   292, 332, 209, 244, 196, 179, 472, 279, 40, 486, 270, 185,
   181, 485, 495, 81, 169, 294, 79, 400, 92, 104, 249
 ];
+        
+document.getElementById('start').innerText = unsortedArr.join(", ");
+
+document.getElementById("go").onclick = function() {
+  var sortedArr = bubbleSort(unsortedArr);
+  document.getElementById('result').innerHTML = sortedArr.join(", ");
+}
+
+          
